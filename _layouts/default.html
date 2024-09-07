@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name=”robots” content=”noindex”>
 
 {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
@@ -15,7 +16,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
+      <!--header>
         <h1 class="header">{{ site.title | default: site.github.repository_name }}</h1>
         <p class="header">{{ site.description | default: site.github.project_tagline }}</p>
 
@@ -36,15 +37,15 @@
             <li><a class="buttons github" href="{{ site.github.owner_url }}">GitHub Profile</a></li>
           </ul>
         {% endif %}
-      </header>
+      </header-->
 
       <section>
         {{ content }}
       </section>
 
-      <footer>
+      <!--footer>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-      </footer>
+      </footer-->
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
   </body>
