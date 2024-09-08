@@ -1,4 +1,6 @@
-﻿目次
+﻿![OreMonitor](assets/img/oremonitor.png)
+
+目次
 
 1. [**俺モニター**で出来ること](#what)
 1. [インストール](#install)
