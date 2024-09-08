@@ -47,9 +47,9 @@
 - DeployGateの仕様上、**俺モニター**作者はインストールされた各端末の機種名やOSのバージョン番号が分かってしまいます
     - それ以外の情報を知ることは出来ません（個人情報などはもちろん分かりません）
 
-![android版](doc_image/android_devices.png)
+![android版](assets/img/android_devices.png)
 
-![iOS版](doc_image/ios_devices.png)
+![iOS版](assets/img/ios_devices.png)
 
 ## インストール手順
 下記の**俺モニター**用DeployGateインストールページを開き、
@@ -264,7 +264,7 @@ SwitchBot機器のデータを閲覧するサービスです。
     - 運転モード、電源ON/OFFなどの値は文字になるため使用できません
 - **俺モニター**内でグラフ表示は行いません
 
-![作成したボードの例](doc_image/dashboard.png)
+![作成したボードの例](assets/img/dashboard.png)
 
 ### 必要なもの
 - [Ambient](https://ambidata.io/)でアカウントを作成し（無料アカウントでOK）、チャネル作成やボード作成を行います
@@ -275,7 +275,7 @@ SwitchBot機器のデータを閲覧するサービスです。
 ### 自動化内容
 - 定期的に[日射量 ひまわり予報](https://www.amecs.co.jp/solar/index.html)のサイトから予測データを取得してLINEやDiscordへ投稿します
 
-![通知文の例](doc_image/solarradiationprediction.png)
+![通知文の例](assets/img/solarradiationprediction.png)
 
 ### 必要なもの
 - **俺モニター**でDiscord WebhookまたはLINE Notifyの設定を完了する（両方設定しても可）
@@ -305,7 +305,7 @@ SwitchBot機器のデータを閲覧するサービスです。
 - 電気自動車充放電器(V2H)の運転モードを制御して、余剰電力が大きい時にPV余剰充電を行います
 - グリーンモードの場合は余剰電力があまり大きくなくても充電が行われるためその場合は変換効率が悪くなってしまいますが、この自動化は変換効率を高くすることを目的にしています
 
-![通知文の例](doc_image/pvsurpluscharge.png)
+![通知文の例](assets/img/pvsurpluscharge.png)
 
 ### 必要なもの
 - 太陽光発電の設備
@@ -350,7 +350,7 @@ SwitchBot機器のデータを閲覧するサービスです。
 ### 自動化内容
 - 機器データの情報を定期的に収集して、メールでの送信やGoogleスプレッドシートへの書き込みを行います
 
-![Googleスプレッドシートへの書き込み例](doc_image/periodicreport.png)
+![Googleスプレッドシートへの書き込み例](assets/img/periodicreport.png)
 
 ### 必要なもの
 - メールで報告を送信する場合は、任意のメールアドレスとそのメールのSMTP設定情報（サーバー、ポート番号など）が必要です
