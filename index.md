@@ -1,4 +1,4 @@
-﻿![OreMonitor picture](assets/img/oremonitor.png)
+﻿![OreMonitorの写真](assets/img/oremonitor.png)
 
 目次
 
