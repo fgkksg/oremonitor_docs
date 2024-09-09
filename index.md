@@ -100,6 +100,8 @@
 - Discord WebhookやLINE Notifyを使用して通知文を投稿します
 - **俺モニター**でDiscord WebhookやLINE Notifyの設定を行っていない場合は投稿されません
 
+![Discord Webhookによる通知](assets/img/notification_discord.png)
+
 ---
 
 <a id="login"></a>
