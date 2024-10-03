@@ -1,6 +1,6 @@
 ﻿---
-title: 俺モニター
-description: 俺モニターの説明書
+title: 俺モニターの説明
+description: 俺モニターの説明書です。
 ---
 
 ![OreMonitorの写真](assets/img/oremonitor.png)

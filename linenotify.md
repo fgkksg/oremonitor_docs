@@ -1,6 +1,6 @@
 ﻿---
-title: 俺モニター
-description: 通知をLINEで受信するための手順
+title: 通知をLINEで受信する
+description: 俺モニターからの通知をLINEで受信するための手順を説明します。
 ---
 
 目次
