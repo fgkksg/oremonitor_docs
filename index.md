@@ -1,4 +1,9 @@
-﻿![OreMonitorの写真](assets/img/oremonitor.png)
+﻿---
+title: 俺モニター
+description: 俺モニターの説明書
+---
+
+![OreMonitorの写真](assets/img/oremonitor.png)
 
 目次
 
