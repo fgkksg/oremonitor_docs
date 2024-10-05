@@ -6,8 +6,7 @@ description: 俺モニターからの通知をLINEで受信するための手順
 目次
 
 1. [はじめに](#introduction)
-1. [Google Cloudコンソールでの手順](#googlecloudconsole)
-1. [Googleスプレッドシートでの手順](#googlespreadsheet)
+1. [LINE Notifyサイトでの手順](#linenotify)
 1. [俺モニターでの手順](#oremonitor)
 
 ---
@@ -23,11 +22,19 @@ description: 俺モニターからの通知をLINEで受信するための手順
 1. アクセストークンを発行する
 1. **俺モニター**にアクセストークンを登録する
 
+---
+
+<a id="linenotify"></a>
+
 # LINE Notifyサイトでの手順
 手順が書かれたページを見つけましたので、[このページ](https://zenn.dev/protoout/articles/18-line-notify-setup)に従って、次のことを実施します。
 
 1. LINE Notifyアカウントを自身のLINE友達に加える
 1. アクセストークンを発行する
+
+---
+
+<a id="oremonitor"></a>
 
 # 俺モニターでの手順
 
