@@ -16,10 +16,10 @@ description: 俺モニターからの通知をLINEで受信するための手順
 # はじめに
 **俺モニター**からの通知をLINEで受信できるようにするために、**LINE Notify**を利用します。
 
-大まかな手順の説明です。
+大まかな手順の流れです。
 
-1. LINE Notifyアカウントを自身のLINE友達に加える
-1. アクセストークンを発行する
+1. LINE Notifyのアクセストークンを発行する
+1. LINEグループに通知する場合はLINE NotifyアカウントをLINEグループに追加する
 1. **俺モニター**にアクセストークンを登録する
 
 ---
@@ -27,10 +27,10 @@ description: 俺モニターからの通知をLINEで受信するための手順
 <a id="linenotify"></a>
 
 # LINE Notifyサイトでの手順
-手順が書かれたページを見つけましたので、[このページ](https://zenn.dev/protoout/articles/18-line-notify-setup)に従って、次のことを実施します。
+手順が書かれたページを見つけましたので、[こちらページ](https://web.joho.info/alert/line-notify-access-token/)に従って、次のことを実施します。
 
-1. LINE Notifyアカウントを自身のLINE友達に加える
-1. アクセストークンを発行する
+1. アクセストークンを発行する（その際に通知先を選択する）
+1. 通知先にLINEグループを選択した場合は、LINEアプリに戻ってLINEグループに「LINE Notify」アカウントを友だちに追加する
 
 ---
 
