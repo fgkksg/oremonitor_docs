@@ -9,6 +9,8 @@ description: 俺モニターからの通知をLINEで受信するための手順
 1. [LINE Notifyサイトでの手順](#linenotify)
 1. [俺モニターでの手順](#oremonitor)
 
+2024/10/26 更新
+
 ---
 
 <a id="introduction"></a>

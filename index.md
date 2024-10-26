@@ -30,6 +30,8 @@ description: 俺モニターの説明書です。
 1. [既知の不具合](#known-issue)
 1. [ToDo](#todo)
 
+2024/10/26 更新
+
 ---
 
 <a id="what"></a>
