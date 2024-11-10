@@ -47,7 +47,7 @@ description: 俺モニターの説明書です。
 - スマートメーターの電力値を常時表示(注[^NeedNatureRemo])
 - V2Hの充放電電力を常時表示
 - V2Hに繋いでいるEVのバッテリー残量に変化があると内容を読み上げたりLINEで通知
-- 翌日の日射量の予測値をLINEやDiscordに毎日自動で投稿
+- 翌日の日射量の予測値をLINEやSlackに毎日自動で投稿
 
 <!--
 - Discordチャットルームの古い会話を定期的に自動削除
@@ -129,8 +129,9 @@ description: 俺モニターの説明書です。
 # 通知について
 機器データが更新されたことや自動処理に関する情報などをユーザーに通知することが出来ます。
 
-- 通知の種類は、端末音によるものとLINEやDiscordへの投稿によるものがあります
+- 通知の種類は、端末音によるものとLINE,Discord,Slackへの投稿によるものがあります
 - LINEへの通知を行う手順は[こちら](linenotify.html)で説明しています
+    - LINEへの通知は2025年4月からは使用できなくなります
 
 ## 通知の例
 - 「ピロリーン」のような端末音
@@ -141,7 +142,7 @@ description: 俺モニターの説明書です。
 - 数値に関する機器データ（温度やバッテリー残量など）には、数値の上昇と下降で個別に音を選択できます
 
 ### 投稿について
-- LINE NotifyやDiscord Webhookを使用して通知文を投稿します
+- LINE Notify、Discord WebhookまたはSlack Incoming Webhooksを使用して通知文を投稿します
 - 俺モニターの設定画面でLINE NotifyやDiscord Webhookの設定を行っていない場合は投稿されません
 
 ![Discord Webhookによる通知](assets/img/notification_discord.png)
@@ -323,9 +324,10 @@ SwitchBot機器のデータを閲覧するサービスです。
 - 俺モニターの「設定＞位置情報」で設定された地理座標の予報データを取得します
 
 ### 必要なもの
-- 俺モニターでLINE NotifyまたはDiscord Webhookの設定を完了する（両方設定しても可）
+- 俺モニターでLINE Notify、Discord WebhookまたはSlack Incoming Webhooksのいずれかの設定を完了する（複数設定しても可）
     - 設定＞通知＞LINE Notify
     - 設定＞通知＞Discord Webhook
+    - 設定＞通知＞Slack Incoming Webhooks
 
 ![通知文の例](assets/img/solarradiationprediction.png)
 
