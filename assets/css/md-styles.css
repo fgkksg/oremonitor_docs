@@ -67,3 +67,11 @@ blockquote cite {
     color: #888888;
     font-size: 0.9em;
 }
+
+th, td {
+    border: solid 1px;
+}
+
+table {
+    border-collapse: collapse;
+}
