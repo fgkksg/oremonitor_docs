@@ -68,6 +68,11 @@ blockquote cite {
     font-size: 0.9em;
 }
 
-table, th, td {
+th, td {
     border: solid 1px #94afba;
+}
+
+table {
+    border: solid 1px #94afba;
+    border-collapse: collapse;
 }
