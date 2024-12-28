@@ -158,6 +158,8 @@ description: 俺モニターの説明書です。
 
 ![Discord Webhookによる通知](assets/img/notification_discord.png)
 
+関連：[Discordチャンネルの投稿文削除](#discordmessagesdelete)
+
 ---
 
 <a id="login"></a>
@@ -198,6 +200,8 @@ HEMS機器の検出と機器データの閲覧を行うサービスです。
 ### ECHONET Lite について
 - 俺モニターはIPv4およびUDPを使用してECHONET Lite機器との通信を行っています
 
+関連：[読み上げ](#speech) / [ダッシュボード](#dashboard) / [PV余剰充電](#pvsurpluscharge) / [定期報告](#periodicreport) / [V2H充放電記録](#v2hchargedischargerecord) / [エアコン更新周期切替](#acupdatecycleswitching) / [V2H更新周期切替](#v2hupdatecycleswitching)
+
 ## Nature Remo サービス
 Nature Remo機器を通してスマートメーターのデータを閲覧するサービスです。
 
@@ -207,6 +211,8 @@ Nature Remo機器を通してスマートメーターのデータを閲覧する
 - Bルートサービスの申し込み
     - 電力会社（送配電会社）の提供するBルートサービスの手続きが必要です
     - 手続き後にNature Remoアプリに自宅のスマートメーターを登録します
+
+関連：[読み上げ](#speech) / [ダッシュボード](#dashboard) / [PV余剰充電](#pvsurpluscharge) / [定期報告](#periodicreport)
 
 ## SwitchBot サービス
 SwitchBot機器のデータを閲覧するサービスです。
@@ -218,6 +224,8 @@ SwitchBot機器のデータを閲覧するサービスです。
 - SwitchBot ハブシリーズ
     - クラウドサービスに必要です
 
+関連：[読み上げ](#speech) / [ダッシュボード](#dashboard) / [定期報告](#periodicreport)
+
 ## チャート サービス
 仮想通貨取引所の各銘柄の価格チャートを閲覧するサービスです。
 
@@ -228,6 +236,14 @@ SwitchBot機器のデータを閲覧するサービスです。
 - 端末のスリープ中など俺モニターが表示されていない間は通信を一時停止します
 - 端末の通信状態によってはリアルタイム取引データの通信が切断されることがあります
     - 切断があれば音および投稿で通知し、少し時間をおいて自動的に再接続が行われます
+
+## Yahoo! JAPAN気象情報 サービス
+Yahoo! JAPAN気象情報APIを使用して降雨予測データを閲覧するサービスです。
+
+- 俺モニターで設定された現在地を使って気象情報を取得します
+- 60分先までの降水強度予測値(mm/h)を表示します
+
+関連：[降雨予測更新周期切替](#rainfallupdatecycleswitching) / [降雨予測警報](#rainfallalert)
 
 ---
 
@@ -257,6 +273,8 @@ SwitchBot機器のデータを閲覧するサービスです。
 ## 並び替え
 1. お気に入りアイテムを長押します
 1. 移動したい位置にドラッグして指またはマウスを離します
+
+関連：[お気に入りアイテムの更新](#favoriteitemsupdate)
 
 ---
 
@@ -289,6 +307,8 @@ SwitchBot機器のデータを閲覧するサービスです。
 - [V2H充放電記録](#v2hchargedischargerecord)
 - [エアコン更新周期切替](#acupdatecycleswitching)
 - [V2H更新周期切替](#v2hupdatecycleswitching)
+- [降雨予測更新周期切替](#rainfallupdatecycleswitching)
+- [降雨警報](#rainfallalert)
 
 <a id="favoriteitemsupdate"></a>
 
@@ -535,6 +555,33 @@ V2Hの充放電開始と終了時に以下の電力を記録します。
 
 ---
 
+<a id="rainfallupdatecycleswitching"/>
+
+## 降雨予測更新周期切替
+
+### 自動化内容
+- 時刻に応じて降雨予測アイテムの更新周期を変えることが出来ます
+- 降雨の予測があるとお気に入り画面の一番上に表示することが出来ます
+
+### 更新動作
+指定した時間帯の更新動作を以下から設定します。
+- 更新する
+- 更新しない
+
+また、指定した以上の降水強度の予測が出ている間、お気に入り画面の一番上に表示するかどうかを設定できます。
+
+---
+
+<a id="rainfallalert"/>
+
+## 降雨警報
+
+### 自動化内容
+- 降雨予測を音声や投稿文で通知します
+- 雨が上がると音声や投稿文で通知します
+
+---
+
 <a id="settings"></a>
 
 # 設定画面
@@ -598,6 +645,8 @@ V2Hの充放電開始と終了時に以下の電力を記録します。
 ## Botアカウントについて
 - このBotは俺モニターの中で動作するため、基本的に、俺モニターをインストールする端末ごとにBotアカウントが必要になります
 - 1つのBotアカウントを複数の俺モニターで共有することも可能ですが、Botが同時ログインすることは出来ないため、最後にログインしたBot以外はログアウトします
+
+関連：[Discordチャンネルの投稿文削除](#discordmessagesdelete)
 
 ---
 
@@ -767,10 +816,6 @@ Botを使用したHEMS機器の遠隔操作については、ECHONET Lite規格�
 <a id="known-issue"></a>
 
 # 既知の不具合
-
-> ~~iOS版では、お気に入り画面のアイテムを一番上に移動させる機能を有効にすると、アイテムが移動した瞬間に俺モニターが強制終了することがあります。<br>
->修正されるまで、iOS版では「設定＞お気に入り＞アイテムの移動」の機能の使用は控えてください。~~
-
 - 読み上げ
     - 標準機能
         - iOS版は音声の名前を指定しても音声が変わらない
