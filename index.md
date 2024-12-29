@@ -1,4 +1,4 @@
-﻿Crere---
+﻿---
 title: 俺モニター
 description: 俺モニターの説明書です。
 ---
