@@ -47,8 +47,8 @@ description: 俺モニターの説明書です。
 - SwitchBot温湿度計の温度を常時表示(注[^NeedSwitchBotHub])
 - スマートメーターの電力値を常時表示(注[^NeedNatureRemo])
 - V2Hの充放電電力を常時表示
-- V2Hに繋いでいるEVのバッテリー残量に変化があると内容を読み上げたりLINEで通知
-- 翌日の日射量の予測値をLINEやSlackに毎日自動で投稿
+- V2Hに繋いでいるEVのバッテリー残量に変化があると内容を読み上げたりSlackやDiscordで通知
+- 翌日の日射量の予測値をSlackやDiscordに毎日自動で投稿
 
 ### 上級
 - Botを使って遠隔操作
@@ -140,21 +140,19 @@ description: 俺モニターの説明書です。
 # 通知について
 機器データが更新されたことや自動処理に関する情報などをユーザーに通知することが出来ます。
 
-- 通知の種類は、端末音によるものとLINE,Discord,Slackへの投稿によるものがあります
-- LINEへの通知を行う手順は[こちら](linenotify.html)で説明しています
-    - LINEへの通知は2025年4月からは使用できなくなります
+- 通知の種類は、端末音によるものとDiscord,Slackへの投稿によるものがあります
 
 ## 通知の例
 - 「ピロリーン」のような端末音
-- 「〇〇の機器データが△△から□□に更新されました」のような文章をLINEやDiscordに投稿
+- 「〇〇の機器データが△△から□□に更新されました」のような文章をSlackやDiscordに投稿
 
 ### 端末音について
 - 機器データごとに音の種類を選択できます
 - 数値に関する機器データ（温度やバッテリー残量など）には、数値の上昇と下降で個別に音を選択できます
 
 ### 投稿について
-- LINE Notify、Discord WebhookまたはSlack Incoming Webhooksを使用して通知文を投稿します
-- 俺モニターの設定画面でLINE Notifyなどの設定を行っていない場合は投稿されません
+- Discord WebhookまたはSlack Incoming Webhooksを使用して通知文を投稿します
+- 俺モニターの設定画面でDiscord WebhookやSlack Incoming Webhooksの設定を行っていない場合は投稿されません
 
 ![Discord Webhookによる通知](assets/img/notification_discord.png)
 
@@ -353,16 +351,17 @@ Yahoo! JAPAN気象情報APIを使用して降雨予測データを閲覧する�
 
 ## 日射量予測
 ### 自動化内容
-- 定期的に[日射量 ひまわり予報](https://www.amecs.co.jp/solar/index.html)のサイトから予測データを取得してLINEやDiscordへ投稿します
+- 定期的に[日射量 ひまわり予報](https://www.amecs.co.jp/solar/index.html)のサイトから予測データを取得してSlackやDiscordへ投稿します
 - 俺モニターの「設定＞位置情報」で設定された地理座標の予報データを取得します
 
 ### 必要なもの
-- 俺モニターでLINE Notify、Discord WebhookまたはSlack Incoming Webhooksのいずれかの設定を完了する（複数設定しても可）
-    - 設定＞通知＞LINE Notify
+- 俺モニターでDiscord WebhookまたはSlack Incoming Webhooksのいずれかの設定を完了する（複数設定しても可）
     - 設定＞通知＞Discord Webhook
     - 設定＞通知＞Slack Incoming Webhooks
 
 ![通知文の例](assets/img/solarradiationprediction.png)
+
+_※上の画像はLINEのスクリーンショットですが、現在はLINEに対応していません。_
 
 <a id="discordmessagesdelete"></a>
 
@@ -416,6 +415,8 @@ Discord Botが参加しているDiscordサーバーの古い投稿を定期的�
     - 下の画像は「直近10時間」になっていますが、最新版は12時間です
 
 ![通知文の例](assets/img/pvsurpluscharge.png)
+
+_※上の画像はLINEのスクリーンショットですが、現在はLINEに対応していません。_
 
 <a id="volatilityalert"></a>
 
@@ -798,6 +799,7 @@ Googleサービスアカウントを使用してGoogleサービスにアクセ�
 - Nature Remo E lite
 - SwitchBot 温湿度計
 - SwitchBot 温湿度計プラス
+- SwitchBot CO2センサー（温湿度計）
 
 ---
 
